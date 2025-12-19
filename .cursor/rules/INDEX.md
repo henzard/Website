@@ -1,6 +1,6 @@
 # Website Development Rules - Complete Index
 
-**Version:** 2.0.0  
+**Version:** 2.1.0  
 **Last Updated:** December 19, 2025  
 **Purpose:** Comprehensive guidelines for building production-ready React + Firebase websites with security, quality, performance, and beginner-friendliness
 
@@ -310,6 +310,22 @@
 
 ---
 
+#### [18-blogging-standards](18-blogging-standards/RULE.md)
+**Purpose:** Content creation, blog writing, and markdown formatting  
+**Key Topics:**
+- Writing compelling hooks (attention-grabbing openings)
+- Blog post structure and formatting
+- SEO for blog content
+- Markdown best practices
+- AI-guided writing assistance
+- Content quality checklist
+- Readability standards
+
+**When to use:** When creating blog content in markdown  
+**Applied to:** `**/blog/**/*.md`, `**/posts/**/*.md`
+
+---
+
 ## 🎯 Rule Priority Matrix
 
 ### Must Follow (Critical)
@@ -338,6 +354,7 @@
 17. **15-payment-processing** - If implementing payments
 18. **16-email-system** - If sending emails
 19. **17-internationalization** - If multi-language support
+20. **18-blogging-standards** - If creating blog content
 
 ---
 
@@ -435,6 +452,7 @@ Deploy! 🚀
 | E-commerce/Payments | 15 | 03, 05, 14, 16 |
 | Email notifications | 16 | 05, 11, 14 |
 | Multi-language site | 17 | 04, 11, 13 |
+| Blog/content site | 18 | 13, 11, 04 |
 | Performance issues | 12 | 02, 03, 13 |
 | Before deployment | All | Especially 05, 06, 14 |
 
@@ -496,6 +514,12 @@ Deploy! 🚀
 **"My site doesn't show up on Google"**  
 → Review 13 (SEO), check meta tags and sitemap
 
+**"I need to write blog posts"**  
+→ Review 18 (blogging), use AI to guide content creation
+
+**"How do I structure markdown blog posts?"**  
+→ Review 18 (blogging), includes templates and examples
+
 ---
 
 ## ✅ Success Indicators
@@ -512,6 +536,14 @@ Deploy! 🚀
 ---
 
 ## 📝 Version History
+
+**v2.1.0 - December 19, 2025**
+- Added blogging standards (18) - Content creation guide
+- Comprehensive blog writing rules
+- Hook writing techniques (not React hooks!)
+- Markdown formatting best practices
+- AI-guided content improvement
+- SEO for blog posts
 
 **v2.0.0 - December 19, 2025**
 - Added 6 advanced rules (12-17)
