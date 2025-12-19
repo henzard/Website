@@ -1,6 +1,6 @@
 # Website Development Rules - Complete Index
 
-**Version:** 2.1.0  
+**Version:** 2.2.0  
 **Last Updated:** December 19, 2025  
 **Purpose:** Comprehensive guidelines for building production-ready React + Firebase websites with security, quality, performance, and beginner-friendliness
 
@@ -326,6 +326,24 @@
 
 ---
 
+#### [19-gallery-products](19-gallery-products/RULE.md)
+**Purpose:** Simple gallery and product display components  
+**Key Topics:**
+- Image gallery with lightbox
+- Product card components
+- Product detail pages
+- Responsive image grids
+- Touch-friendly interactions
+- Mobile-optimized layouts
+- Basic product showcase (3-10 items)
+
+**When to use:** For showcasing images or small product catalogs  
+**Applied to:** `**/components/Gallery*`, `**/components/Product*`, `**/pages/products/**`, `**/pages/gallery/**`
+
+**Note:** For full e-commerce (cart, checkout), combine with Rule 15 (Payment Processing)
+
+---
+
 ## 🎯 Rule Priority Matrix
 
 ### Must Follow (Critical)
@@ -355,6 +373,7 @@
 18. **16-email-system** - If sending emails
 19. **17-internationalization** - If multi-language support
 20. **18-blogging-standards** - If creating blog content
+21. **19-gallery-products** - If displaying images/products
 
 ---
 
@@ -453,6 +472,8 @@ Deploy! 🚀
 | Email notifications | 16 | 05, 11, 14 |
 | Multi-language site | 17 | 04, 11, 13 |
 | Blog/content site | 18 | 13, 11, 04 |
+| Gallery/portfolio site | 19 | 12, 04, 13 |
+| Small product catalog | 19 | 13, 04, 12 |
 | Performance issues | 12 | 02, 03, 13 |
 | Before deployment | All | Especially 05, 06, 14 |
 
@@ -520,6 +541,12 @@ Deploy! 🚀
 **"How do I structure markdown blog posts?"**  
 → Review 18 (blogging), includes templates and examples
 
+**"I need to display a product gallery"**  
+→ Review 19 (gallery-products), simple layouts for 3-10 items
+
+**"How do I create a lightbox for images?"**  
+→ Review 19 (gallery-products), includes lightbox component
+
 ---
 
 ## ✅ Success Indicators
@@ -536,6 +563,13 @@ Deploy! 🚀
 ---
 
 ## 📝 Version History
+
+**v2.2.0 - December 19, 2025**
+- Added gallery & product display (19) - Simple showcase components
+- Image gallery with lightbox
+- Product cards and detail pages
+- Touch-friendly interactions
+- Perfect for small catalogs (3-10 items)
 
 **v2.1.0 - December 19, 2025**
 - Added blogging standards (18) - Content creation guide
