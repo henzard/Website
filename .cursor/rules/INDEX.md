@@ -1,6 +1,6 @@
 # Website Development Rules - Complete Index
 
-**Version:** 2.2.0  
+**Version:** 3.0.0  
 **Last Updated:** December 19, 2025  
 **Purpose:** Comprehensive guidelines for building production-ready React + Firebase websites with security, quality, performance, and beginner-friendliness
 
@@ -344,6 +344,179 @@
 
 ---
 
+#### [20-authentication](20-authentication/RULE.md)
+**Purpose:** User authentication, login, registration, and role-based access  
+**Key Topics:**
+- Firebase Auth integration
+- Login/registration forms
+- Social login (Google, Facebook)
+- Password reset flow
+- Role-based access control (RBAC)
+- Protected routes
+- Session management
+
+**When to use:** Any project with user accounts  
+**Applied to:** `**/auth/**`, `**/components/Auth*`, `**/hooks/useAuth*`
+
+---
+
+#### [21-forms-validation](21-forms-validation/RULE.md)
+**Purpose:** Form handling, validation, and user input patterns  
+**Key Topics:**
+- React Hook Form + Zod
+- Reusable form components
+- Validation schemas
+- Multi-step forms
+- File uploads
+- Error handling
+
+**When to use:** Any form implementation  
+**Applied to:** `**/components/Form*`, `**/components/*Form*`
+
+---
+
+#### [22-file-storage](22-file-storage/RULE.md)
+**Purpose:** Firebase Storage for file uploads and management  
+**Key Topics:**
+- Storage security rules
+- Image upload with preview
+- Progress indicators
+- Image optimization
+- Unique filenames
+
+**When to use:** Any file/image upload feature  
+**Applied to:** `**/storage/**`, `**/upload/**`
+
+---
+
+#### [23-deployment](23-deployment/RULE.md)
+**Purpose:** CI/CD, deployment, and environment management  
+**Key Topics:**
+- GitHub Actions workflows
+- Firebase Hosting
+- Staging vs Production
+- Environment variables
+- Preview deployments
+- Rollback procedures
+
+**When to use:** Setting up deployment pipelines  
+**Applied to:** `**/.github/**`, `**/firebase.json`
+
+---
+
+#### [24-booking-system](24-booking-system/RULE.md)
+**Purpose:** Appointment scheduling and reservation systems  
+**Key Topics:**
+- Availability management
+- Time zone handling
+- Double-booking prevention
+- Calendar integration
+- Booking notifications
+- Cancellation flows
+
+**When to use:** Any booking/scheduling feature  
+**Applied to:** `**/booking/**`, `**/calendar/**`
+
+---
+
+#### [25-contact-forms](25-contact-forms/RULE.md)
+**Purpose:** Contact forms and lead capture  
+**Key Topics:**
+- Form implementation
+- Spam protection (reCAPTCHA)
+- Honeypot fields
+- Lead storage
+- Auto-response emails
+
+**When to use:** Contact pages, inquiry forms  
+**Applied to:** `**/components/Contact*`
+
+---
+
+#### [26-notifications](26-notifications/RULE.md)
+**Purpose:** Push and in-app notification systems  
+**Key Topics:**
+- Firebase Cloud Messaging
+- In-app notifications
+- Notification preferences
+- Real-time updates
+- Permission handling
+
+**When to use:** Any notification feature  
+**Applied to:** `**/notifications/**`
+
+---
+
+#### [27-analytics](27-analytics/RULE.md)
+**Purpose:** Analytics, tracking, and user behavior  
+**Key Topics:**
+- Google Analytics 4
+- Event tracking
+- Consent management
+- E-commerce events
+- Page view tracking
+
+**When to use:** Any production site  
+**Applied to:** `**/analytics/**`
+
+---
+
+#### [28-search](28-search/RULE.md)
+**Purpose:** Search implementation with Algolia or Firebase  
+**Key Topics:**
+- Algolia integration
+- Autocomplete
+- Search indexing
+- Typo tolerance
+- Result ranking
+
+**When to use:** Content-heavy sites needing search  
+**Applied to:** `**/search/**`
+
+---
+
+#### [29-admin-dashboard](29-admin-dashboard/RULE.md)
+**Purpose:** Admin panels and content management  
+**Key Topics:**
+- Role-protected routes
+- Data tables
+- CRUD operations
+- Dashboard stats
+- Admin layout
+
+**When to use:** Sites needing admin interface  
+**Applied to:** `**/admin/**`, `**/dashboard/**`
+
+---
+
+#### [30-pwa-mobile](30-pwa-mobile/RULE.md)
+**Purpose:** Progressive Web App and mobile optimization  
+**Key Topics:**
+- Web app manifest
+- Service workers
+- Offline support
+- Install prompts
+- Touch-friendly design
+
+**When to use:** Mobile-focused or installable apps  
+**Applied to:** `**/sw.js`, `**/manifest.json`
+
+---
+
+#### [31-theming-darkmode](31-theming-darkmode/RULE.md)
+**Purpose:** Theming system and dark mode  
+**Key Topics:**
+- CSS custom properties
+- System preference detection
+- Theme toggle
+- Persistent preferences
+- Smooth transitions
+
+**When to use:** Sites with theme customization  
+**Applied to:** `**/theme/**`, `**/contexts/Theme*`
+
+---
+
 ## 🎯 Rule Priority Matrix
 
 ### Must Follow (Critical)
@@ -374,6 +547,18 @@
 19. **17-internationalization** - If multi-language support
 20. **18-blogging-standards** - If creating blog content
 21. **19-gallery-products** - If displaying images/products
+22. **20-authentication** - If user accounts required
+23. **21-forms-validation** - For all forms
+24. **22-file-storage** - If file uploads needed
+25. **23-deployment** - For CI/CD setup
+26. **24-booking-system** - If scheduling features
+27. **25-contact-forms** - For contact/inquiry forms
+28. **26-notifications** - If push/in-app notifications
+29. **27-analytics** - For production tracking
+30. **28-search** - If search functionality
+31. **29-admin-dashboard** - If admin panel needed
+32. **30-pwa-mobile** - For PWA features
+33. **31-theming-darkmode** - For theme customization
 
 ---
 
@@ -474,8 +659,16 @@ Deploy! 🚀
 | Blog/content site | 18 | 13, 11, 04 |
 | Gallery/portfolio site | 19 | 12, 04, 13 |
 | Small product catalog | 19 | 13, 04, 12 |
+| User authentication | 20, 21 | 03, 05, 14 |
+| File uploads | 22 | 03, 12, 14 |
+| Booking/scheduling | 24 | 16, 26, 20 |
+| Contact forms | 25, 21 | 16, 14 |
+| Admin panel | 29, 20 | 10, 14 |
+| Search feature | 28 | 12, 13 |
+| PWA/mobile app | 30 | 12, 04 |
+| Dark mode | 31 | 04, 02 |
 | Performance issues | 12 | 02, 03, 13 |
-| Before deployment | All | Especially 05, 06, 14 |
+| Before deployment | 23 | 06, 14, 27 |
 
 ---
 
@@ -547,6 +740,42 @@ Deploy! 🚀
 **"How do I create a lightbox for images?"**  
 → Review 19 (gallery-products), includes lightbox component
 
+**"I need user login and registration"**  
+→ Review 20 (authentication), complete Firebase Auth setup
+
+**"How do I handle form validation?"**  
+→ Review 21 (forms-validation), React Hook Form + Zod
+
+**"I need to upload files/images"**  
+→ Review 22 (file-storage), Firebase Storage patterns
+
+**"How do I set up CI/CD?"**  
+→ Review 23 (deployment), GitHub Actions workflows
+
+**"I need a booking/appointment system"**  
+→ Review 24 (booking-system), complete scheduling
+
+**"I need a contact form with spam protection"**  
+→ Review 25 (contact-forms), reCAPTCHA integration
+
+**"I need push notifications"**  
+→ Review 26 (notifications), FCM setup
+
+**"How do I add Google Analytics?"**  
+→ Review 27 (analytics), GA4 with consent
+
+**"I need search functionality"**  
+→ Review 28 (search), Algolia integration
+
+**"I need an admin dashboard"**  
+→ Review 29 (admin-dashboard), CRUD patterns
+
+**"I want my app to work offline"**  
+→ Review 30 (pwa-mobile), service worker setup
+
+**"I need dark mode"**  
+→ Review 31 (theming-darkmode), theme system
+
 ---
 
 ## ✅ Success Indicators
@@ -564,12 +793,25 @@ Deploy! 🚀
 
 ## 📝 Version History
 
+**v3.0.0 - December 19, 2025** ⭐ MAJOR RELEASE
+- Added 12 new comprehensive rules (20-31)
+- **20-authentication** - Complete auth system with Firebase Auth
+- **21-forms-validation** - React Hook Form + Zod patterns
+- **22-file-storage** - Firebase Storage with security
+- **23-deployment** - CI/CD with GitHub Actions
+- **24-booking-system** - Scheduling and appointments
+- **25-contact-forms** - Lead capture with spam protection
+- **26-notifications** - Push and in-app notifications
+- **27-analytics** - GA4 with consent management
+- **28-search** - Algolia and Firebase search
+- **29-admin-dashboard** - Admin panels and CRUD
+- **30-pwa-mobile** - PWA with offline support
+- **31-theming-darkmode** - Theme system and dark mode
+- **Total Rules: 32** (was 20)
+- Complete production-ready coverage for any web application
+
 **v2.2.0 - December 19, 2025**
-- Added gallery & product display (19) - Simple showcase components
-- Image gallery with lightbox
-- Product cards and detail pages
-- Touch-friendly interactions
-- Perfect for small catalogs (3-10 items)
+- Added gallery & product display (19)
 
 **v2.1.0 - December 19, 2025**
 - Added blogging standards (18) - Content creation guide
